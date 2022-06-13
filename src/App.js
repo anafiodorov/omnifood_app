@@ -65,7 +65,7 @@ function App() {
   const createClient = (event) => {
     event.preventDefault();
     console.log(JSON.stringify(userInput));
-    fetch('http://localhost:3001/clients', {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/clients`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
